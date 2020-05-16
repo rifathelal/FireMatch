@@ -60,12 +60,12 @@ public class MainActivity extends AppCompatActivity {
                 //Do something on the left!
                 //You also have access to the original object.
                 //If you want to use it just cast it (String) dataObject
-                makeToast(MyActivity.this, "Left!");
+                Toast.makeText(MainActivity.this, "left", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onRightCardExit(Object dataObject) {
-                makeToast(MyActivity.this, "Right!");
+                Toast.makeText(MainActivity.this, "right", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -79,9 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onScroll(float scrollProgressPercent) {
-                View view = flingContainer.getSelectedView();
-                view.findViewById(R.id.item_swipe_right_indicator).setAlpha(scrollProgressPercent < 0 ? -scrollProgressPercent : 0);
-                view.findViewById(R.id.item_swipe_left_indicator).setAlpha(scrollProgressPercent > 0 ? scrollProgressPercent : 0);
+               
             }
         });
 
