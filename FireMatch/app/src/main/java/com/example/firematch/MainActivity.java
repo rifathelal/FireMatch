@@ -3,11 +3,11 @@ package com.example.firematch;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.app.Activity;
+
 import android.content.Context;
-import android.os.Bundle;
+
 import android.util.Log;
-import android.view.View;
+
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
@@ -15,10 +15,7 @@ import com.lorentzos.flingswipe.SwipeFlingAdapterView;
 
 import java.util.ArrayList;
 
-//import butterknife.ButterKnife;
-//import butterknife.InjectView;
-//import butterknife.OnClick;
-// random comment
+
 public class MainActivity extends AppCompatActivity {
 
     private ArrayList<String> al;
@@ -94,23 +91,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    static void makeToast(Context ctx, String s){
-        Toast.makeText(ctx, s, Toast.LENGTH_SHORT).show();
-    }
-
-
-    @OnClick(R.id.right)
-    public void right() {
-        /**
-         * Trigger the right event manually.
-         */
-        flingContainer.getTopCardListener().selectRight();
-    }
-
-    @OnClick(R.id.left)
-    public void left() {
-        flingContainer.getTopCardListener().selectLeft();
-    }
+    
 
 
 }
