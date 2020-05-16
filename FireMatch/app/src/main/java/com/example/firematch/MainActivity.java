@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onScroll(float scrollProgressPercent) {
-               
+
             }
         });
 
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
         flingContainer.setOnItemClickListener(new SwipeFlingAdapterView.OnItemClickListener() {
             @Override
             public void onItemClicked(int itemPosition, Object dataObject) {
-                makeToast(MyActivity.this, "Clicked!");
+               Toast.makeText(MainActivity.this, "click", Toast.LENGTH_SHORT).show();
             }
         });
 
